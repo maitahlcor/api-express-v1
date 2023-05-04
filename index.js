@@ -58,8 +58,8 @@ app.delete("/api/persons/:id", (req,res) => {
 app.post("/api/persons", (req, res) => {
   const newContact = {
     id: Math.floor(Math.random() * 1000000).toString(),
-    name: 'Pepito',
-    number: '01-23-4567-89',
+    name: 'Leman Russ',
+    number: '01-23-4567-89-VI',
   }
    
   const {name, number} = newContact;
