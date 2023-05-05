@@ -26,12 +26,13 @@ const {
     const { name, number } = contact;
     const record = createContact(contact);
     if (!number) {
-      return res.status(400).json({ message: "Number is empty" });
-    }else if (name === contact.name) {
-      return res.status(400).json({ message: "Contact already exist" });
-    }else{
-    return res.status(201).json(record);
+      return res.status(400).json({ message: "Number is requiered" });
     }
+    if (name === contact.name) {
+      return res.status(400).json({ message: "Contact already exist" });
+    }
+    return res.status(201).json(record);
+    
   }
   
   function handleEditContact(req, res) {
